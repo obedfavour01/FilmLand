@@ -1,0 +1,12 @@
+.features{
+
+
+    padding: 0 100px;
+    .cards{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:80px;
+    }   
+}

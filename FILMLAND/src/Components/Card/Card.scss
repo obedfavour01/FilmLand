@@ -1,0 +1,46 @@
+.ImgContainer{
+    width: 250px;
+    height: 370px;
+
+    img{
+        width: 100%;
+
+    }
+}
+
+    .DetailsBox{
+        width: 250px;
+        border: 2px solid red;
+
+        .year{
+           
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: left;
+
+        }
+
+        .title{
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23px;
+            text-align: left;
+
+        }
+
+        .rating{
+            display: flex;
+            justify-content: space-between;
+
+            .left-rating{
+                display: flex;
+                gap:10px;
+            }
+
+            .right-rating{
+                display: flex;
+                gap:10px;
+            }
+        }
+    }
