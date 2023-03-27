@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 import './Carousel.scss'
 import Card from '../Card/Card'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosNewIcon from '@mui/icons-material/ArrowForwardIos';
-import { useRef } from 'react';
+import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFailure, fetchStart, fetchSuccess } from '../../Redux/MovieSlice';
 
-const Carousel = () => {
+const Carousel = ({type,children}) => {
 
+const dispatch = useDispatch();
+
+const Movies = useSelector(state => state.Movies)
 
     const[isMoved,setIsMoved] = useState(false)
     const[slideNumber, setSlideNumber] =  useState(0)
@@ -24,9 +29,9 @@ const Carousel = () => {
       cardsRef.current.style.transform = `translateX(${-358+ distance}px)`
       
     }
-    console.log(distance)
   }
-  
+
+
   return (
     <div>
 
@@ -37,16 +42,11 @@ const Carousel = () => {
           style ={{display:!isMoved && "none"}}/>
 
         <div className="cards" ref={cardsRef}>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
+          {
+
+            children
+          }
+         
         </div>
         <ArrowForwardIosNewIcon className='sliderArrow right' onClick = {() => handleClick("right")}/>
     
