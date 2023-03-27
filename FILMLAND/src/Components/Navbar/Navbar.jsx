@@ -2,10 +2,13 @@ import React from 'react'
 import './Navbar.scss'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search';
+import useScroll from '../../Hooks/useScroll';
+
 
 const Navbar = () => {
+    const isScrolled = useScroll(100);
   return (
-    <div className='navbar'>
+    <div className= {isScrolled ? 'navbar scrolled' : 'navbar'}>
         <div className="left">
             <div className="logo">
                     <img src="images/tv.png" alt="" />

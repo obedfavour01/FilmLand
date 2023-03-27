@@ -24,7 +24,7 @@ const Movies = useSelector(state => state.Movies)
       setSlideNumber(slideNumber - 1)
       cardsRef.current.style.transform = `translateX(${358 + distance}px)`
     }
-    if(direction === "right" && slideNumber < 5){
+    if(direction === "right" && slideNumber < 15){
       setSlideNumber(slideNumber + 1)
       cardsRef.current.style.transform = `translateX(${-358+ distance}px)`
       

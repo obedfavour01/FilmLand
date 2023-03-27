@@ -8,80 +8,112 @@
     align-items: center;
     background: transparent;
     position:fixed;
+    z-index: 99;
+    
     top:0;
     left: 0;
     right: 0;
 
-}
-
-
-.left{
-  display: flex;
-  flex:1;
-
-  .logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color:#fff;
-
-    .img{
-        width: 50px;
-        height: 50px;
+    &.scrolled{
+        background: rgb(14, 12, 12);
     }
-  }
-}
+    
+    
 
-.center{
-   
-    flex:2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#fff;
-    height: 100%;
+        .left{
+            display: flex;
+            flex:1;
 
-    .inputField{
-        border: 2px solid #fff;
-        border-radius: 6px;
-        width: 35rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height:40%;
-
-
-        input{
-            width: 70%;
-            height: 100%;
-            border:0;
-            color: #fff;
-            outline:0;
-            background: transparent;
-
-
-            &::placeholder{
-                font-size: 14px;
-                color:#e3e1e1;
-                font-weight: 100;
-
+            .logo{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color:#fff;
+                
+                    .img{
+                        width: 50px;
+                        height: 50px;
+                    }
             }
         }
 
-       }
-}
-.right{
-    flex:1;
-    color:#fff;
+        .center{
+        
+            flex:2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#fff;
+            height: 100%;
+            
+            @media screen and (max-width: 992px){
+                flex:1;
+               
+            }
+            .inputField{
+                border: 2px solid #fff;
+                border-radius: 6px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height:40%;
 
-   .userName{
-    display: flex;  
-    align-items: center;
-    justify-content: end;
-    gap: 20px;
+                
+                input{
+                    width: 70%;
+                    height: 100%;
+                    border:0;
+                    padding: 0 20px;
+                    font-size: 16px;
+                    color: #fff;
+                    outline:0;
+                    background: transparent;
 
-   }
+                    @media screen and (max-width: 992px){
+                        width: 100%;;
+                    }
+
+                    &::placeholder{
+                        font-size: 14px;
+                        color:#e3e1e1;
+                        font-weight: 100;
+
+                    }
+                }
+
+                @media screen and (max-width: 720px){
+                    display: none;
+                    }
+
+                    @media screen and (max-width: 992px){
+                        // width:20rem;
+                    }
+                    
+            }
+
+           
+            
+        }
+
+
+        .right{
+            flex:1;
+            color:#fff;
     
+            .userName{
+                display: flex;  
+                align-items: center;
+                justify-content: end;
+                gap: 20px;
 
+                
+                @media screen and (max-width: 992px){
+                    font-size: 14px;
+                    }
     
+            }
+        
+    
+        }
 }

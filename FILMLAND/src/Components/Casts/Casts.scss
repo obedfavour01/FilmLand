@@ -1,0 +1,15 @@
+.casts{
+    margin-top: 50px;
+    
+    .titleBox{
+        padding: 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        small{
+            color: rgba(190, 18, 60, 1);
+
+        }
+    }
+}

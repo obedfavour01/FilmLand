@@ -3,10 +3,14 @@
     border: .5px solid rgb(86, 86, 225);
     background: url("images/Poster.png");
     background-size: cover;
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
     color:var(--white);
     padding: 0 60px;
     align-items: center;
     display: flex;
+
 
     .textbox{
         width: 410px;
@@ -20,6 +24,10 @@
                 line-height: 56px;
                 padding: 0;
                 margin: 0;
+
+                @media screen and (max-width: 560px){
+                    font-size: 36px;
+                }
             }
         }
 
@@ -56,6 +64,11 @@
                 margin-top: 0;
                 font-size: 16px;
                 line-height: 18px;
+                
+                
+                @media screen and (max-width: 560px){
+                    font-size: 12px;
+                }
             }
         
 
